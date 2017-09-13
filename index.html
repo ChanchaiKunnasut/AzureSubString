@@ -6,7 +6,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type='text/javascript'>
     window.onload = function () {
-      Formio.createForm(document.getElementById('formio'), 'https://chanchaikunnasut.github.io/AzureSubString/index.json').then(function(form){
+      Formio.createForm(document.getElementById('formio'), './index.json').then(function(form){
         form.on('submit', function(submission) {
           var url = 'https://apimanament.azure-api.net/left/left?str=';
           url += submission.data.string;
@@ -21,7 +21,6 @@
           }).done(function(data){
             alert(JSON.stringify(data))
 	form.submission ={ data: {
-
 		result: JSON.stringify(data.result)
   }
 };
