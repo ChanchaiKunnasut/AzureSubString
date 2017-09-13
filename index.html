@@ -7,30 +7,8 @@
   <script type="text/javascript" language="javascript" src="index.json"></script>
   <script type='text/javascript'>
     window.onload = function () {
-      Formio.createForm(document.getElementById('formio'), formdata).then(function(form){
-        form.on('submit', function(submission) {
-          var url = 'https://apimanament.azure-api.net/left/left?str=';
-          url += submission.data.string;
-          url += '&x=';
-          url += submission.data.index;
-          $.ajax({
-            url: url,
-            beforeSend: function(xhrObj){
-              // Request Header
-            },
-            type: "GET"
-          }).done(function(data){
-	form.submission ={ data: {
-		result: JSON.stringify(data.result)
-  }
-};
-          }).fail(function(err){
-            console.log(err)
-          });
-        console.log(submission);
-        });
-    });
-    }
+      Formio.createForm(document.getElementById('formio'), formdata);
+    };
   </script>
 </head>
 
