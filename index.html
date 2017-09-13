@@ -7,7 +7,7 @@
   <script type="text/javascript" language="javascript" src="index.json"></script>
   <script type='text/javascript'>
     window.onload = function () {
-      Formio.createForm(document.getElementById('formio'), Formdata).then(function(form){
+      Formio.createForm(document.getElementById('formio'), formdata).then(function(form){
         form.on('submit', function(submission) {
           var url = 'https://apimanament.azure-api.net/left/left?str=';
           url += submission.data.string;
