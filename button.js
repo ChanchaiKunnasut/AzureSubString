@@ -12,7 +12,8 @@ var url = 'https://apimanament.azure-api.net/left/left?str=';
 	form.submission ={ data: {
         string: form.submission.data.string,
         index: form.submission.data.index,
-		result: JSON.stringify(data.result)
+    result: JSON.stringify(data.result),
+    count: JSON.stringify(data.count)
   }
 };
           }).fail(function(err){
