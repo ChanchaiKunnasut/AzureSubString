@@ -1,6 +1,6 @@
-var url = 'https://apimanament.azure-api.net/left/left?str=';
+var url = 'http://th-api-management.azure-api.net/substring/request/';
           url += form.submission.data.string;
-          url += '&x=';
+          url += '/';
           url += form.submission.data.index;
           $.ajax({
             url: url,
@@ -12,8 +12,8 @@ var url = 'https://apimanament.azure-api.net/left/left?str=';
 	form.submission ={ data: {
         string: form.submission.data.string,
         index: form.submission.data.index,
-    result: JSON.stringify(data.result),
-    count: JSON.stringify(data.count)
+    result: data.result,
+    number: data.number
   }
 };
           }).fail(function(err){
